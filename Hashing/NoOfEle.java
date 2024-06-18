@@ -15,10 +15,22 @@ public class NoOfEle {
             arr[i]= sc.nextInt();
         }
 
+        //Pre-computation
 
+        int hash[] = new int[13];
+        for (int i = 0; i <n ; i++) {
+            hash[arr[i]] += 1;
+        }
+        
+        
         System.out.println("Enter the no of Query");
         int Q = sc.nextInt();
 
+        while (Q-- != 0){
+            int number;
+            number= sc.nextInt();
+            System.out.println(number+" -> "+ hash[number]+ "times");
+        }
 
     }
 
